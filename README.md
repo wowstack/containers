@@ -1,4 +1,4 @@
-# # WowStack: C/C++ language image
+# WowStack: C/C++ language image
 
 This repository contains a build and development runtime for creating, compiling
 and running code written in [C/C++ language][cpp-lang].
@@ -8,7 +8,7 @@ using [cmake][cmake] to define and run builds. For further details, read up on
 [Modern C++][modern-cpp] as this image is tailored to support the modern C++
 mindset.
 
-The [development][docker-hub-devel]and [runtime][docker-hub-runtime] images are
+The [development][docker-hub-devel] and [runtime][docker-hub-runtime] images are
 automatically pushed to Docker Hub.
 
 ## What this image provides
