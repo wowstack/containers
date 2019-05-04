@@ -1,0 +1,39 @@
+---
+kind: pipeline
+name: default
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: publish-development-environment
+  image: plugins/docker
+  settings:
+    auto_tag: true
+    dockerfile: development/Dockerfile
+    repo: wowstack/build-image
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+  when:
+    event:
+    - push
+    - tag
+
+- name: publish-runtime-environment
+  image: plugins/docker
+  settings:
+    auto_tag: true
+    dockerfile: runtime/Dockerfile
+    repo: wowstack/runtime-base-image
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+  when:
+    event:
+    - push
+    - tag
+...

@@ -5,6 +5,7 @@ and further references.
 
 Items starting with `DEPRECATION` are important deprecation notices.
 
-## Unrelease
+## 2.0.3 (2019-05-04)
 
+- [Added] development and runtime image definitions
 - [Added] initial project structure
