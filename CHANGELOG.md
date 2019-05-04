@@ -7,6 +7,7 @@ Items starting with `DEPRECATION` are important deprecation notices.
 
 ## Unreleased
 
+- [Changed] to PVS Studio 7.02.31917.1198
 - [Changed] to CMake 3.14.3
 
 ## 2.0.3 (2019-05-04)
