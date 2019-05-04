@@ -57,10 +57,9 @@ RUN set -xe \
   && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
 # CMake
-# https://cmake.org/files/v3.14/cmake-3.14.2-Linux-x86_64.tar.gz
 ENV CMAKE_VERSION 3.14
-ENV CMAKE_FILENAME cmake-3.14.2-Linux-x86_64.tar.gz
-ENV CMAKE_SHA256 73a2997a7bd212be62d84ba2a4207d7296c3139604d03d79e8800be7c2b0b7e1
+ENV CMAKE_FILENAME cmake-3.14.3-Linux-x86_64.tar.gz
+ENV CMAKE_SHA256 29faa62fb3a0b6323caa3d9557e1a5f1205614c0d4c5c2a9917f16a74f7eff68
 
 RUN set -xe \
   && curl -fSL "https://cmake.org/files/v$CMAKE_VERSION/$CMAKE_FILENAME" -o "$CMAKE_FILENAME" \
