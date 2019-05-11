@@ -1,0 +1,3 @@
+WowStack containers ship with software bundles. You can find the licenses under:
+/opt/wowstack/nami/COPYING
+/opt/wowstack/[name-of-bundle]/licenses/[bundle-version].txt
