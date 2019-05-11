@@ -27,8 +27,8 @@ ENV NAMI_SHA256 80488279b056d5e9c183fe34097c5f496715ab16a602afcc9f78d59f15139a16
 RUN cd /tmp && \
   curl -sSLO https://nami-prod.s3.amazonaws.com/tools/nami/releases/nami-$NAMI_VERSION-linux-x64.tar.gz && \
   echo "$NAMI_SHA256  nami-$NAMI_VERSION-linux-x64.tar.gz" | sha256sum -c - && \
-  mkdir -p /opt/wowstack/nami && \
-  tar xzf nami-$NAMI_VERSION-linux-x64.tar.gz --strip 1 -C /opt/wowstack/nami && \
+  mkdir -p /opt/bitnami/nami && \
+  tar xzf nami-$NAMI_VERSION-linux-x64.tar.gz --strip 1 -C /opt/bitnami/nami && \
   rm nami-$NAMI_VERSION-linux-x64.tar.gz
 
 ENV GPG_KEY_SERVERS_LIST ha.pool.sks-keyservers.net \
