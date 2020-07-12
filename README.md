@@ -28,7 +28,7 @@ It includes:
   - Boost
   - BZip2
   - Lua
-  - MySQL
+  - MariaDB
   - OpenSSL
   - ZLib
 

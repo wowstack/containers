@@ -5,6 +5,10 @@ and further references.
 
 Items starting with `DEPRECATION` are important deprecation notices.
 
+## 2.1.1 (2020-07-12)
+
+- [Fixed] path used for publishing
+
 ## 2.1.0 (2020-07-12)
 
 - [Changed] to version 2.1.0
