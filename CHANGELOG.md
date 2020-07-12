@@ -7,9 +7,13 @@ Items starting with `DEPRECATION` are important deprecation notices.
 
 ## Unreleased
 
+- [Changed] images to use Ubuntu 20.04
+- [Fixed] nami path
+- [Improved] runtime environment
 - [Fixed] checksum for PVS Studio 7.02.31917.1198
 - [Changed] to PVS Studio 7.02.31917.1198
 - [Changed] to CMake 3.14.3
+- [Fixed] typos
 
 ## 2.0.3 (2019-05-04)
 

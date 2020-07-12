@@ -13,17 +13,17 @@ automatically pushed to Docker Hub.
 
 ## What this image provides
 
-This images is a Ubuntu 18.04 (Bionic Beaver) based development environment for
+This images is a Ubuntu 20.04 (Focal Fossa) based development environment for
 projects requiring to build standards compliant C/C++ code using CMake based
 build systems.
 
 It includes:
 
 - build tool such as `make` and `libtool`,
-- [clang][clang] 6.0,
-- [clang format][clang-format] 6.0,
-- [clang Tidy][clang-tidy] 6.0,
-- [cmake][cmake] 3.14,
+- [clang][clang],
+- [clang format][clang-format],
+- [clang Tidy][clang-tidy],
+- [cmake][cmake],
 - development headers and libraries
   - Boost
   - BZip2

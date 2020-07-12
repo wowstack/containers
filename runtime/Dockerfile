@@ -1,6 +1,6 @@
 # vim:set ft=dockerfile:
 
-FROM ubuntu:bionic
+FROM ubuntu:focal
 LABEL maintainer="WowStack project <support@wowstack.io>"
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -37,7 +37,7 @@ ENV GPG_KEY_SERVERS_LIST ha.pool.sks-keyservers.net \
   hkp://keyserver.ubuntu.com:80 \
   pgp.mit.edu
 
-ENV TINI_VERSION v0.13.2
+ENV TINI_VERSION v0.19.0
 ENV TINI_GPG_KEY 595E85A6B1B4779EA4DAAEC70B588DFF0527A9B7
 
 RUN cd /tmp && \
@@ -51,7 +51,7 @@ RUN cd /tmp && \
   chmod +x /usr/local/bin/tini && \
   rm tini.asc
 
-ENV GOSU_VERSION=1.10 \
+ENV GOSU_VERSION=1.12 \
   GOSU_GPG_KEY=B42F6819007F00F88E364FD4036A9C25BF357DD4
 
 RUN cd /tmp && \
@@ -69,21 +69,21 @@ RUN set -xe \
   && dependencies=" \
   libbz2-1.0 \
   liblua5.3-0 \
-  libmariadbclient18 \
-  libncurses5 \
-  libreadline7 \
+  libmariadb3 \
+  libncurses6 \
+  libreadline8 \
   libsdl2-2.0-0 \
-  libssl1.0.0 \
+  libssl1.1 \
   zlib1g \
-  libboost-atomic1.62.0 \
-  libboost-chrono1.62.0 \
-  libboost-date-time1.62.0 \
-  libboost-filesystem1.62.0 \
-  libboost-program-options1.62.0 \
-  libboost-regex1.62.0 \
-  libboost-serialization1.62.0 \
-  libboost-system1.62.0 \
-  libboost-thread1.62.0 \
+  libboost-atomic1.71.0 \
+  libboost-chrono1.71.0 \
+  libboost-date-time1.71.0 \
+  libboost-filesystem1.71.0 \
+  libboost-program-options1.71.0 \
+  libboost-regex1.71.0 \
+  libboost-serialization1.71.0 \
+  libboost-system1.71.0 \
+  libboost-thread1.71.0 \
   " \
   && apt-get update && apt-get install -y $dependencies --no-install-recommends \
   && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false -o APT::AutoRemove::SuggestsImportant=false \

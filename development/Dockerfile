@@ -1,6 +1,6 @@
 # vim:set ft=dockerfile:
 
-FROM ubuntu:bionic
+FROM ubuntu:focal
 LABEL maintainer="WowStack project <support@wowstack.io>"
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -18,9 +18,12 @@ RUN set -xe \
 
 RUN set -xe \
   && clangPackages=" \
-  clang-6.0 \
-  clang-format-6.0 \
-  clang-tidy-6.0 \
+  clang \
+  clang-10 \
+  clang-format \
+  clang-format-10 \
+  clang-tidy \
+  clang-tidy-10 \
   cppcheck \
   make \
   libtool \
@@ -34,12 +37,12 @@ RUN set -xe \
   && developmentDependencies=" \
   libbz2-dev \
   liblua5.3-dev \
-  libmariadbclient-dev \
-  libmariadbclient-dev-compat \
-  libncurses5-dev \
+  libmariadb-dev \
+  libmariadb-dev-compat \
+  libncurses-dev \
   libreadline-dev \
   libsdl2-dev \
-  libssl1.0-dev \
+  libssl-dev \
   zlib1g-dev \
   libboost-dev \
   libboost-atomic-dev \
@@ -57,9 +60,9 @@ RUN set -xe \
   && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
 # CMake
-ENV CMAKE_VERSION 3.14
-ENV CMAKE_FILENAME cmake-3.14.3-Linux-x86_64.tar.gz
-ENV CMAKE_SHA256 29faa62fb3a0b6323caa3d9557e1a5f1205614c0d4c5c2a9917f16a74f7eff68
+ENV CMAKE_VERSION 3.17
+ENV CMAKE_FILENAME cmake-3.17.3-Linux-x86_64.tar.gz
+ENV CMAKE_SHA256 da8093956f0b4ae30293c9db498da9bdeaeea4e7a2b1f2d1637ddda064d06dd0
 
 RUN set -xe \
   && curl -fSL "https://cmake.org/files/v$CMAKE_VERSION/$CMAKE_FILENAME" -o "$CMAKE_FILENAME" \
@@ -67,17 +70,3 @@ RUN set -xe \
   && mkdir -p /usr/local \
   && tar -xf "$CMAKE_FILENAME" -C /usr/local --strip-components=1 \
   && rm "$CMAKE_FILENAME"
-
-# PVS Studio
-ENV PVS_STUDIO_VERSION 7.02.31917.1198
-ENV PVS_STUDIO_SRC_URL http://files.viva64.com/pvs-studio-7.02.31917.1198-amd64.deb
-ENV PVS_STUDIO_SRC_SHA256 e594be1e9d38625f03d93ba90fcdda0076a7133a7e18cd47348f9c4c537881a1
-
-RUN set -xe \
-  && apt-get update \
-  && curl -fSL "${PVS_STUDIO_SRC_URL}" -o "$HOME/pvs-studio-${PVS_STUDIO_VERSION}-amd64.deb" \
-  && echo "${PVS_STUDIO_SRC_SHA256}  $HOME/pvs-studio-${PVS_STUDIO_VERSION}-amd64.deb" | shasum -a 256 -c - \
-  && apt-get install -y --no-install-recommends "$HOME/pvs-studio-${PVS_STUDIO_VERSION}-amd64.deb" \
-  && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false -o APT::AutoRemove::SuggestsImportant=false \
-  && rm -rf /var/lib/apt/lists/* /var/cache/apt/* \
-  && rm -f "$HOME/pvs-studio-${PVS_STUDIO_VERSION}-amd64.deb"
