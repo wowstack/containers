@@ -11,6 +11,7 @@ on:
 jobs:
   build:
     name: Build Docker Images
+    if: github.event_name == 'push' || github.event_name == 'pull_request'
     runs-on: ubuntu-20.04
 
     steps:
