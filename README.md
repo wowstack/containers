@@ -1,4 +1,4 @@
-# WowStack: C/C++ language image
+# WowStack: Docker Container Images
 
 This repository contains a build and development runtime for creating, compiling
 and running code written in [C/C++ language][cpp-lang].
@@ -19,7 +19,7 @@ build systems.
 
 It includes:
 
-- build tool such as `make` and `libtool`,
+- build tools such as `make` and `libtool`,
 - [clang][clang],
 - [clang format][clang-format],
 - [clang Tidy][clang-tidy],

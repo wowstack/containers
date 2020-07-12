@@ -5,8 +5,9 @@ and further references.
 
 Items starting with `DEPRECATION` are important deprecation notices.
 
-## Unreleased
+## 2.1.0 (2020-07-12)
 
+- [Changed] to version 2.1.0
 - [Fixed] build conditions
 - [Added] actions to automatically build images
 - [Changed] images to use Ubuntu 20.04
