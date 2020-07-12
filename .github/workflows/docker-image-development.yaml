@@ -22,7 +22,7 @@ jobs:
 
   push_to_registry:
     name: Push Docker image to Docker Hub
-    if: contains(github.ref, "release")
+    if: github.event_name == 'release' && github.event.action == 'published'
     runs-on: ubuntu-20.04
     steps:
       - name: Check out the repo

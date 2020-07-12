@@ -7,6 +7,7 @@ Items starting with `DEPRECATION` are important deprecation notices.
 
 ## Unreleased
 
+- [Fixed] build conditions
 - [Added] actions to automatically build images
 - [Changed] images to use Ubuntu 20.04
 - [Fixed] nami path
