@@ -7,6 +7,7 @@ Items starting with `DEPRECATION` are important deprecation notices.
 
 ## Unreleased
 
+- [Changed] to CMake 3.18.0
 - [Added] Botan support
   See <https://botan.randombit.net/> for details.
 - [Added] notes on building locally

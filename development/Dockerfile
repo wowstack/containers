@@ -61,9 +61,9 @@ RUN set -xe \
   && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
 # CMake
-ENV CMAKE_VERSION 3.17
-ENV CMAKE_FILENAME cmake-3.17.3-Linux-x86_64.tar.gz
-ENV CMAKE_SHA256 da8093956f0b4ae30293c9db498da9bdeaeea4e7a2b1f2d1637ddda064d06dd0
+ENV CMAKE_VERSION 3.18
+ENV CMAKE_FILENAME cmake-3.18.0-Linux-x86_64.tar.gz
+ENV CMAKE_SHA256 4d9a9d3351161073a67e49366d701b6fa4b0343781982dc5eef08a02a750d403
 
 RUN set -xe \
   && curl -fSL "https://cmake.org/files/v$CMAKE_VERSION/$CMAKE_FILENAME" -o "$CMAKE_FILENAME" \
