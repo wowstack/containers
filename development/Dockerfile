@@ -54,6 +54,7 @@ RUN set -xe \
   libboost-serialization-dev \
   libboost-system-dev \
   libboost-thread-dev \
+  libbotan-2-dev \
   " \
   && apt-get update && apt-get install -y $developmentDependencies --no-install-recommends \
   && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false -o APT::AutoRemove::SuggestsImportant=false \

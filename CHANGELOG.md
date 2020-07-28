@@ -7,6 +7,8 @@ Items starting with `DEPRECATION` are important deprecation notices.
 
 ## Unreleased
 
+- [Added] Botan support
+  See <https://botan.randombit.net/> for details.
 - [Added] notes on building locally
 - [Changed] to build test on pushes and PRs
 

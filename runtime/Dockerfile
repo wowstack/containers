@@ -84,6 +84,7 @@ RUN set -xe \
   libboost-serialization1.71.0 \
   libboost-system1.71.0 \
   libboost-thread1.71.0 \
+  libbotan-2-12 \
   " \
   && apt-get update && apt-get install -y $dependencies --no-install-recommends \
   && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false -o APT::AutoRemove::SuggestsImportant=false \
