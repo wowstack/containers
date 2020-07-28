@@ -7,6 +7,7 @@ Items starting with `DEPRECATION` are important deprecation notices.
 
 ## Unreleased
 
+- [Added] notes on building locally
 - [Changed] to build test on pushes and PRs
 
 ## 2.1.1 (2020-07-12)

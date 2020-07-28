@@ -32,6 +32,11 @@ It includes:
   - OpenSSL
   - ZLib
 
+## Building Locally
+
+- development image: `docker build --tag wowstack/build-image:latest -f development/Dockerfile development/`
+- runtime image: `docker build --tag wowstack/runtime-base-image:latest -f runtime/Dockerfile runtime/`
+
 ## Support
 
 Meanwhile we are on [Discord][discord-url], so come chat with us.
